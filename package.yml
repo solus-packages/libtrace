@@ -1,0 +1,28 @@
+name       : libtrace
+version    : 4.0.0
+release    : 1
+source     :
+     - http://research.wand.net.nz/software/libtrace/libtrace-4.0.0.tar.bz2 : e89ac39808e2bb1e17e031191af8ab7bdbe3d2b0aeca4c6040e6fc8761ec0240   
+license    : GPL-3.0
+component  : programming
+summary    : libtrace is a library for trace processing 
+description: |
+    libtrace is a library for trace processing. It supports multiple
+    input methods, including device capture, raw and gz-compressed trace,
+    and sockets; and multiple input formats, including pcap and DAG.
+builddeps  :
+    - pkgconfig(ncursesw)
+    - pkgconfig(openssl)
+    - libpcap-devel
+    - libwandio-devel
+    - llvm-devel
+    - lzo-devel
+setup      : |
+    %configure \
+        --disable-static \
+        --with-llvm \
+        --with-ncurses
+build      : |
+    %make
+install    : |
+    %make_install

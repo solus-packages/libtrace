@@ -1,0 +1,99 @@
+<PISI>
+    <Source>
+        <Name>libtrace</Name>
+        <Packager>
+            <Name>Mark Timms</Name>
+            <Email>mtimms@gwu.edu</Email>
+        </Packager>
+        <License>GPL-3.0</License>
+        <PartOf>programming</PartOf>
+        <Summary xml:lang="en">libtrace is a library for trace processing</Summary>
+        <Description xml:lang="en">libtrace is a library for trace processing. It supports multiple
+input methods, including device capture, raw and gz-compressed trace,
+and sockets; and multiple input formats, including pcap and DAG.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>libtrace</Name>
+        <Summary xml:lang="en">libtrace is a library for trace processing</Summary>
+        <Description xml:lang="en">libtrace is a library for trace processing. It supports multiple
+input methods, including device capture, raw and gz-compressed trace,
+and sockets; and multiple input formats, including pcap and DAG.
+</Description>
+        <PartOf>programming</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/eth_0.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/eth_2048.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/eth_2054.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/eth_33024.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/eth_34525.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/eth_34887.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/eth_34916.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/eth_34958.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ip_0.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ip_1.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ip_132.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ip_17.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ip_33.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ip_41.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ip_43.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ip_44.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ip_47.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ip_58.protocol</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ip_6.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ip_60.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ip_89.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/link_0.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/link_1.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/link_10.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/link_11.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/link_15.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/link_17.protocol</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/link_2.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/link_3.protocol</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/link_4.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/link_5.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/link_6.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/link_9.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ospf2_1.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ospf2_1000.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ospf2_1001.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ospf2_1002.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ospf2_1003.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ospf2_1004.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ospf2_1005.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ospf2_4.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ospf2_5.so</Path>
+            <Path fileType="library">/usr/lib64/libpacketdump/ppp_33.so</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libtrace-devel</Name>
+        <Summary xml:lang="en">Development files for libtrace</Summary>
+        <Description xml:lang="en">libtrace is a library for trace processing. It supports multiple
+input methods, including device capture, raw and gz-compressed trace,
+and sockets; and multiple input formats, including pcap and DAG.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">libtrace</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2016-11-05</Date>
+            <Version>4.0.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Mark Timms</Name>
+            <Email>mtimms@gwu.edu</Email>
+        </Update>
+    </History>
+</PISI>
