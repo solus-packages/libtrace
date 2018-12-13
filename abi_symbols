@@ -60,6 +60,13 @@ libtrace.so.4:libtrace_list_push_back
 libtrace.so.4:libtrace_list_push_front
 libtrace.so.4:libtrace_make_packet_safe
 libtrace.so.4:libtrace_make_result_safe
+libtrace.so.4:libtrace_message_queue_count
+libtrace.so.4:libtrace_message_queue_destroy
+libtrace.so.4:libtrace_message_queue_get
+libtrace.so.4:libtrace_message_queue_get_fd
+libtrace.so.4:libtrace_message_queue_init
+libtrace.so.4:libtrace_message_queue_put
+libtrace.so.4:libtrace_message_queue_try_get
 libtrace.so.4:libtrace_ocache_alloc
 libtrace.so.4:libtrace_ocache_destroy
 libtrace.so.4:libtrace_ocache_free
@@ -85,6 +92,11 @@ libtrace.so.4:libtrace_ringbuffer_try_swrite_bl
 libtrace.so.4:libtrace_ringbuffer_try_write
 libtrace.so.4:libtrace_ringbuffer_write
 libtrace.so.4:libtrace_ringbuffer_write_bulk
+libtrace.so.4:libtrace_scb_advance_read
+libtrace.so.4:libtrace_scb_destroy
+libtrace.so.4:libtrace_scb_get_read
+libtrace.so.4:libtrace_scb_init
+libtrace.so.4:libtrace_scb_recv_sock
 libtrace.so.4:libtrace_thread_get_message
 libtrace.so.4:libtrace_thread_get_message_count
 libtrace.so.4:libtrace_thread_try_get_message
@@ -102,10 +114,20 @@ libtrace.so.4:libtrace_zero_deque
 libtrace.so.4:libtrace_zero_ocache
 libtrace.so.4:libtrace_zero_ringbuffer
 libtrace.so.4:libtrace_zero_vector
+libtrace.so.4:toeplitz_create_bikey
+libtrace.so.4:toeplitz_create_unikey
+libtrace.so.4:toeplitz_first_hash
+libtrace.so.4:toeplitz_hash
+libtrace.so.4:toeplitz_hash_expand_key
+libtrace.so.4:toeplitz_hash_packet
+libtrace.so.4:toeplitz_init_config
+libtrace.so.4:toeplitz_ncreate_bikey
+libtrace.so.4:toeplitz_ncreate_unikey
 libtrace.so.4:trace_add_statistics
 libtrace.so.4:trace_apply_filter
 libtrace.so.4:trace_checksum_layer3
 libtrace.so.4:trace_checksum_transport
+libtrace.so.4:trace_clear_statistics
 libtrace.so.4:trace_config
 libtrace.so.4:trace_config_output
 libtrace.so.4:trace_construct_packet
@@ -118,6 +140,7 @@ libtrace.so.4:trace_create_filter_from_bytecode
 libtrace.so.4:trace_create_output
 libtrace.so.4:trace_create_packet
 libtrace.so.4:trace_create_statistics
+libtrace.so.4:trace_decrement_packet_refcount
 libtrace.so.4:trace_destroy
 libtrace.so.4:trace_destroy_callback_set
 libtrace.so.4:trace_destroy_dead
@@ -127,6 +150,7 @@ libtrace.so.4:trace_destroy_packet
 libtrace.so.4:trace_ether_aton
 libtrace.so.4:trace_ether_ntoa
 libtrace.so.4:trace_event
+libtrace.so.4:trace_flush_output
 libtrace.so.4:trace_free_packet
 libtrace.so.4:trace_get_accepted_packets
 libtrace.so.4:trace_get_capture_length
@@ -183,6 +207,7 @@ libtrace.so.4:trace_get_payload_from_udp
 libtrace.so.4:trace_get_payload_from_vlan
 libtrace.so.4:trace_get_payload_from_vxlan
 libtrace.so.4:trace_get_payload_length
+libtrace.so.4:trace_get_perpkt_thread_id
 libtrace.so.4:trace_get_perpkt_threads
 libtrace.so.4:trace_get_received_packets
 libtrace.so.4:trace_get_seconds
@@ -217,6 +242,7 @@ libtrace.so.4:trace_has_dedicated_hasher
 libtrace.so.4:trace_has_finished
 libtrace.so.4:trace_has_reporter
 libtrace.so.4:trace_help
+libtrace.so.4:trace_increment_packet_refcount
 libtrace.so.4:trace_interrupt
 libtrace.so.4:trace_is_err
 libtrace.so.4:trace_is_err_output
@@ -235,6 +261,7 @@ libtrace.so.4:trace_perror
 libtrace.so.4:trace_perror_output
 libtrace.so.4:trace_post_reporter
 libtrace.so.4:trace_ppause
+libtrace.so.4:trace_prepare_packet
 libtrace.so.4:trace_print_statistics
 libtrace.so.4:trace_pstart
 libtrace.so.4:trace_pstop
